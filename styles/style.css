@@ -1,0 +1,205 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+
+}
+
+.roulette {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 20px auto;
+ 
+   
+}
+
+.wheel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 5px solid #000000;
+    transform: rotate(0deg);
+    transition: transform 3s cubic-bezier(0.33, 0, 0.66, 1);
+    overflow: hidden;
+    
+}
+
+.segment {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background:transparent;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transform-origin: 100% 100%;
+    
+}
+
+.segment:nth-child(1) {
+    background-color: #ff0000;
+    transform: rotate(0deg);
+}
+
+.segment:nth-child(2) {
+    background-color: #00ff00;
+    transform: rotate(90deg);
+}
+
+.segment:nth-child(3) {
+    background-color: #0000ff;
+    transform: rotate(180deg);
+}
+
+.segment:nth-child(4) {
+    background-color: #ffff00;
+    transform: rotate(270deg);
+}
+
+.number {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 34px;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000;
+    transform-origin: 50% 50%;
+    text-align: center;
+}
+
+.number:nth-child(5) {
+    transform: rotate(0deg);
+}
+
+.number:nth-child(6) {
+    transform: rotate(90deg);
+}
+
+.number:nth-child(7) {
+    transform: rotate(180deg);
+}
+
+.number:nth-child(8) {
+    transform: rotate(270deg);
+}
+
+.pointer {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translate(-50%, 50%) rotate(55deg);
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 30px solid #001011;
+    z-index: 10;
+}
+.btn10{
+    margin-top: 6px;
+    padding: 14px;
+    width: 100px;
+    height: hug(67px);
+    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #000000;
+    cursor: hand;
+    text-align: center;
+    border: 2px solid #000000;
+    border-radius:12px;
+    position: relative;
+    overflow: hidden!important;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    background-color: transparent!important;
+    z-index:10;
+    
+}
+
+
+.btn10:hover{
+    border: 1px solid #010101;
+    color: #ffffff!important;
+}
+.btn10::before {
+    content: '';
+    width: 0%;
+    height: 100%;
+    display: block;
+    background: #010101;
+    position: absolute;
+    -ms-transform: skewX(-20deg);
+    -webkit-transform: skewX(-20deg); 
+    transform: skewX(-20deg);   
+    left: -10%;
+    opacity: 1;
+    top: 0;
+    z-index: -12;
+    -moz-transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+  -webkit-transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+     box-shadow:2px 0px 14px rgba(0,0,0,.6);
+  } 
+
+.btn10::after {
+    content: '';
+    width: 0%;
+    height: 100%;
+    display: block;
+    background: #80ffd3;
+    position: absolute;
+  -ms-transform: skewX(-20deg);
+    -webkit-transform: skewX(-20deg); 
+    transform: skewX(-20deg);   
+    left: -10%;
+    opacity: 0;
+    top: 0;
+    z-index: -15;
+    -webkit-transition: all .94s cubic-bezier(.2,.95,.57,.99);
+    -moz-transition: all .4s cubic-bezier(.2,.95,.57,.99);
+    -o-transition: all .4s cubic-bezier(.2,.95,.57,.99);
+    transition: all .4s cubic-bezier(.2,.95,.57,.99);
+    box-shadow: 2px 0px 14px rgba(0,0,0,.6);
+}
+.btn10:hover::before, .btn1O:hover::before{
+  opacity:1;
+  width: 116%;
+}
+.btn10:hover::after, .btn1O:hover::after{
+  opacity:1;
+  width: 120%;
+}
+
+.inputs {
+    margin-top: 20px;
+}
+
+.inputs input {
+    width: 150px;
+    padding: 5px;
+    margin: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.actions {
+    margin-top: 10px;
+}

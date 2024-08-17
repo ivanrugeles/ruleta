@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" media="all" href="styles/style.css">
+
+    <title>ruleta</title>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="inputs">
+            <input type="text" id="input1" placeholder="Nombre para el color 1">
+            <input type="text" id="input2" placeholder="Nombre para el color 2">
+            <input type="text" id="input3" placeholder="Nombre para el color 3">
+            <input type="text" id="input4" placeholder="Nombre para el color 4">
+        </div>
+        <div class="actions">
+            <button class="btn10"   id="update">Cambiar</button>
+        </div>
+        <div class="roulette">
+            <div class="wheel">
+             
+                <div class="segment"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+
+             
+                <div class="number" id="segment1" style="transform: rotate(-45deg) translateY(-120px);">1</div>
+                <div class="number" id="segment2"style="transform: rotate(45deg) translateY(-120px);">2</div>
+                <div class="number"id="segment3" style="transform: rotate(135deg) translateY(-120px);">3</div>
+                <div class="number" id="segment4"style="transform: rotate(225deg) translateY(-120px);">4</div>
+            </div>
+            <div class="pointer"></div>
+        </div>
+        <button class="btn10" id="spinButton">Girar</button>
+        
+    </div>
+</body>
+<script src="app.js"></script>
+</html>
